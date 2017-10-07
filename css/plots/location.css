@@ -1,0 +1,36 @@
+#appConatiner{
+    width: 300px;
+    height:500px;
+    box-sizing:border-box;
+    padding:12px;
+    border-radius:3px;
+    background-color:#232323;
+    color:#ecf0f1;
+  }
+  #location{
+    padding:8px;
+  }
+  .details{
+    margin-bottom:6px;
+  }
+  #location > .details > h4{
+    padding:4px 0;
+    border-bottom:1.5px solid #ecf0f1;
+    letter-spacing:4px;
+    font-size:12px;
+    color: #3498db;
+    padding-left:4px;
+  }
+  #location > .details > p{
+    padding:4px 0;
+    letter-spacing:2px;
+    font-size:16px;
+  }
+  #map{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  #map > img{
+    height:250px;
+  }

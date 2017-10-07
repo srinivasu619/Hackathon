@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bar Chart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" href="./css/prediction/index.css">
+    <link rel="stylesheet" href="./css/common/nav.css">
+    <link rel="stylesheet" href="./css/prediction/table.css">
+    <link rel="stylesheet" href="./css/common/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="appHeader">
+            <div id="appImg">
+                <img src="http://i.imgrpost.com/imgr/2017/10/07/001-stats.png" alt="001-stats.png" border="0" />
+            </div>
+            <h1 id="appName">
+                VizLit
+            </h1>
+        </div>
+        <div id="menuContainer">
+            <ul id="menu">
+                <a href="./index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="./plots.html">
+                    <li>PLOTS</li>
+                </a>
+                <a href="#">
+                    <li>PREDICTIONS</li>
+                </a>
+                <a href="#">
+                    <li>CONTACT</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <div class="mainContainer">
+        <div class="chartsContainer">
+            <canvas id="barChart" height="500" width="500"></canvas>
+        </div>
+    </div>
+    <table id="populate">
+        <tr>
+            <th>States</th>
+            <th>2001</th>
+            <th>2011</th>
+            <th>2021( Predicted )</th>
+        </tr>
+    </table>
+    <footer>
+        <div>©2017 ALL RIGHTS RESERVED.</div>
+        <div>
+            Prepared By Team DEL_73.
+        </div>
+        <div id="hackImg">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </footer>
+    <script src="./js/prediction/script.js"></script>
+</body>
+
+</html>

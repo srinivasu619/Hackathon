@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home/index.css">
+    <link rel="stylesheet" href="./css/common/nav.css">
+    <link rel="stylesheet" href="./css/common/footer.css">
+    <meta charset="utf-8">
+    <title>Simple Polygon</title>
+</head>
+
+<body>
+    <nav>
+        <div id="appHeader">
+            <div id="appImg">
+                <img src="http://i.imgrpost.com/imgr/2017/10/07/001-stats.png" alt="001-stats.png" border="0" />
+            </div>
+            <h1 id="appName">
+                VizLit
+            </h1>
+        </div>
+        <div id="menuContainer">
+            <ul id="menu">
+                <a href="#">
+                    <li>HOME</li>
+                </a>
+                <a href="./plots.html">
+                    <li>PLOTS</li>
+                </a>
+                <a href="./prediction.html">
+                    <li>PREDICTIONS</li>
+                </a>
+                <a href="#">
+                    <li>CONTACT</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <div id="map_container">
+        <div id="map"></div>
+        <div id="information">
+            <h1>India</h1>
+            <p></p>
+        </div>
+    </div>
+    <div id="chartConatiner">
+        <div class="chart">
+            <canvas id="lineChart_home" height="500" width="500"></canvas>
+        </div>
+        <div class="chart">
+
+        </div>
+    </div>
+    <footer>
+        <div>©2017 ALL RIGHTS RESERVED.</div>
+        <div>
+            Prepared By Team DEL_73.
+        </div>
+        <div id="hackImg">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </footer>
+
+    <script src="./js/home/map.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOJFWWh5fRC8qcCGiP6QxSmeo8U6I_V0E&callback=initMap">
+</script>
+    <script src="./js/home/linechart_home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+footer{
+    padding:24px;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hackImg{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hackImg > img {
+    height: 50px;
+}

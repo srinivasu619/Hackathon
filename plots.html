@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link rel="stylesheet" href="./css/plots/index.css">
+    <link rel="stylesheet" href="./css/plots/location.css">
+    <link rel="stylesheet" href="./css/plots/gender.css">
+    <link rel="stylesheet" href="./css/common/nav.css">
+    <link rel="stylesheet" href="./css/common/footer.css">
+    <link rel="stylesheet" href="./css/plots/search.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <nav>
+        <div id="appHeader">
+            <div id="appImg">
+                <img src="http://i.imgrpost.com/imgr/2017/10/07/001-stats.png" alt="001-stats.png" border="0" />
+            </div>
+            <h1 id="appName">
+                VizLit
+            </h1>
+        </div>
+        <div id="menuContainer">
+            <ul id="menu">
+                <a href="./index.html">
+                    <li>HOME</li>
+                </a>
+                <a href="#">
+                    <li>PLOTS</li>
+                </a>
+                <a href="./prediction.html">
+                    <li>PREDICTIONS</li>
+                </a>
+                <a href="#">
+                    <li>CONTACT</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <div id="inputContainer">
+            <input type="text" id="searchval" placeholder="Search ...."
+                   spellcheck="false">
+            <div id="buttons">
+              <i class="fa fa-search fa-2x" aria-hidden="true" id="searchbutton"></i>
+            </div>
+    </div>
+    <!-- location card -->
+    <!-- <div class="mainContainer">
+        <div class="chartsContainer">
+            <canvas id="lineChart" height="400" width="400"></canvas>
+        </div>
+        <div class="smallContainer">
+            <div id="appConatiner">
+                <div id="location">
+                    <div class="details">
+                        <h4>LOCATION</h4>
+                        <p>Delhi, India</p>
+                    </div>
+                    <div class="details">
+                        <h4>POPULATION DENSITY</h4>
+                        <p>29,259.12 people per square mile</p>
+                    </div>
+                    <div class="details">
+                        <h4>SEX RATIO</h4>
+                        <p>866 women:1000 men</p>
+                    </div>
+                </div>
+                <div id="map">
+                    <img src="http://i.imgrpost.com/imgr/2017/10/04/Delhi_map.png" alt="Delhi_map.png" border="0" />
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- gender male card -->
+    <div class="mainContainer">
+        <div class="smallContainer">
+            <div class="appContainer">
+                <div class="symbol">
+                    <div class="sign">
+                        <img src="http://i.imgrpost.com/imgr/2017/10/05/002-man.png" alt="002-man.png" border="0">
+                    </div>
+                    <h3>MALE LITERACY</h3>
+                </div>
+                <div class="depict">
+                    <img src="http://i.imgrpost.com/imgr/2017/10/04/003-man-1.png" alt="003-man-1.png" border="0" />
+                </div>
+                <div class="categoryHeaders">
+                    <h5>Literate Male</h5>
+                    <h5>Illiterate Male</h5>
+                </div>
+                <div class="pbars">
+                    <div id="litMale" class="bars"></div>
+                    <div id="illMale" class="bars"></div>
+                </div>
+            </div>
+        </div>
+        <div class="chartsContainer">
+            <canvas id="lineChart1" height="400" width="400"></canvas>
+        </div>
+    </div>
+    <!-- gender female card -->
+    <div class="mainContainer">
+        <div class="chartsContainer">
+            <canvas id="lineChart2" height="400" width="400"></canvas>
+        </div>
+        <div class="smallContainer">
+            <div class="appContainer">
+                <div class="symbol">
+                    <div class="sign">
+                        <img src="http://i.imgrpost.com/imgr/2017/10/05/001-signs.png" alt="001-signs.png" border="0">
+                    </div>
+                    <h3 style="color:#f05228">FEMALE LITERACY</h3>
+                </div>
+                <div class="depict">
+                    <img src="http://i.imgrpost.com/imgr/2017/10/04/004-girl.png" alt="004-girl.png" border="0" />
+                </div>
+                <div class="categoryHeaders" style="width:95%;">
+                    <h5 style="color:#f05228">Literate Female</h5>
+                    <h5 style="color:#f05228">Illiterate Female</h5>
+                </div>
+                <div class="pbars">
+                    <div id="litFemale" class="bars"></div>
+                    <div id="illFemale" class="bars"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- urban -->
+    <div class="mainContainer">
+        <div class="smallContainer">
+            <div class="appContainer">
+                <h3>URBAN LITERACY</h3>
+                <div class="depict">
+                    <img src="http://i.imgrpost.com/imgr/2017/10/04/002-cityscape.png" alt="002-cityscape.png" border="0" />
+                </div>
+                <div class="categoryHeaders">
+                    <h5>Literate People</h5>
+                    <h5>Illiterate People</h5>
+                </div>
+                <div class="pbars">
+                    <div id="litUrban" class="bars"></div>
+                    <div id="illUrban" class="bars"></div>
+                </div>
+            </div>
+        </div>
+        <div class="chartsContainer">
+            <canvas id="lineChart3" height="400" width="400"></canvas>
+        </div>
+    </div>
+    <!-- rural -->
+    <div class="mainContainer">
+        <div class="chartsContainer">
+            <canvas id="lineChart4" height="400" width="400"></canvas>
+        </div>
+        <div class="smallContainer">
+            <div class="appContainer">
+                <h3>RURAL LITERACY</h3>
+                <div class="depict">
+                    <img src="http://i.imgrpost.com/imgr/2017/10/04/001-farm.png" alt="001-farm.png" border="0" />
+                </div>
+                <div class="categoryHeaders">
+                    <h5>Literate People</h5>
+                    <h5>Illiterate People</h5>
+                </div>
+                <div class="pbars">
+                    <div id="litRural" class="bars"></div>
+                    <div id="illRural" class="bars"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>©2017 ALL RIGHTS RESERVED.</div>
+        <div>
+            Prepared By Team DEL_73.
+        </div>
+        <div id="hackImg">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+    </footer>
+    <script src="./js/plots/script.js"></script>
+</body>
+
+</html>

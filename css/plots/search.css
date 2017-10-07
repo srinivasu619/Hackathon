@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input {
+    outline: none;
+}
+
+#inputContainer {
+    border: 3px solid #16A085;
+    padding: 10px 20px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 3em;
+    background-color: #2C3E50;
+    display: flex;
+    justify-content: space-between;
+}
+
+#searchval {
+    border: none;
+    height: 40px;
+    width: 40%;
+    background-color: #2C3E50;
+    color: #16A085;
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+}
+
+#buttons {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #16A085;
+}
+
+#buttons>i {
+    cursor: pointer;
+}

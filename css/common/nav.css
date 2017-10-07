@@ -1,0 +1,47 @@
+nav {
+    padding: 20px;
+    display: flex;
+}
+#appHeader{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#appHeader > h1{
+    letter-spacing: 3px;
+}
+
+#appImg>img {
+    height: 75px;
+}
+
+#menuContainer {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu {
+    width: 80%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu>a {
+    text-decoration: none;
+}
+
+#menu>a>li {
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+}
+
+#menu>a>li:hover {
+    font-size: 24px;
+}
