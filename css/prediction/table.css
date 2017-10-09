@@ -16,9 +16,12 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-    text-align: center
+    text-align: center;
 }
-
+th{
+    font-size: 24px;
+    letter-spacing: 2px;
+}
 tr:nth-child(even) {
     background-color: #dddddd;
 }

@@ -29,6 +29,11 @@
     padding-bottom: 8px;
     border-bottom: 1px solid #fff;
 }
+#information > p{
+    padding: 12px 8px;
+    line-height: 1.8em;
+    letter-spacing: 2px;
+}
 
 #chartConatiner {
     height: 600px;
@@ -42,4 +47,7 @@
 .chart {
     height: 500px;
     width: 500px;
+}
+ul > li {
+    padding: 6px 6px;
 }

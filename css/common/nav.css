@@ -44,4 +44,5 @@ nav {
 
 #menu>a>li:hover {
     font-size: 24px;
+    text-decoration: underline;
 }
