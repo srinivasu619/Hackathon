@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title></title>
+    <title>VizLit</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" href="./appicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -40,20 +41,19 @@
                     <li>PREDICTIONS</li>
                 </a>
                 <a href="#">
-                    <li>CONTACT</li>
+                    <li>CONCLUSION</li>
                 </a>
             </ul>
         </div>
     </nav>
     <div id="inputContainer">
-            <input type="text" id="searchval" placeholder="Search ...."
-                   spellcheck="false">
-            <div id="buttons">
-              <i class="fa fa-search fa-2x" aria-hidden="true" id="searchbutton"></i>
-            </div>
+        <input type="text" id="searchval" placeholder="Search ...." spellcheck="false">
+        <div id="buttons">
+            <i class="fa fa-search fa-2x" aria-hidden="true" id="searchbutton"></i>
+        </div>
     </div>
     <!-- location card -->
-    <!-- <div class="mainContainer">
+    <div class="mainContainer">
         <div class="chartsContainer">
             <canvas id="lineChart" height="400" width="400"></canvas>
         </div>
@@ -62,23 +62,31 @@
                 <div id="location">
                     <div class="details">
                         <h4>LOCATION</h4>
-                        <p>Delhi, India</p>
+                        <p id="loc"></p>
                     </div>
                     <div class="details">
                         <h4>POPULATION DENSITY</h4>
-                        <p>29,259.12 people per square mile</p>
+                        <p id="dense"></p>
+                        <!-- 29,259.12 people per square mile -->
                     </div>
                     <div class="details">
                         <h4>SEX RATIO</h4>
-                        <p>866 women:1000 men</p>
+                        <p id="ratio"></p>
+                        <!-- 866 women:1000 men -->
                     </div>
-                </div>
-                <div id="map">
-                    <img src="http://i.imgrpost.com/imgr/2017/10/04/Delhi_map.png" alt="Delhi_map.png" border="0" />
+                    <div class="categoryHeaders">
+                        <h5>Literate People</h5>
+                        <h5>Illiterate People</h5>
+                    </div>
+                    <div class="pbars">
+                        <div id="litp" class="bars"></div>
+                        <div id="illp" class="bars"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+    <h1>GENDER BASED DISTRIBUTION</h1>
     <!-- gender male card -->
     <div class="mainContainer">
         <div class="smallContainer">
@@ -133,6 +141,7 @@
             </div>
         </div>
     </div>
+    <h1>HOUSEHOLD BASED DISTRIBUTION</h1>
     <!-- urban -->
     <div class="mainContainer">
         <div class="smallContainer">
@@ -183,10 +192,10 @@
             Prepared By Team DEL_73.
         </div>
         <div id="hackImg">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img src="https://event.data.gov.in/wp-content/themes/event/images/digital.png" alt="">
+            <img src="https://event.data.gov.in/wp-content/themes/event/images/mygov.png" alt="">
+            <img src="https://event.data.gov.in/wp-content/themes/event/images/india.png" alt="">
+            <img src="https://event.data.gov.in/wp-content/themes/event/images/opengov.png" alt="">
         </div>
     </footer>
     <script src="./js/plots/script.js"></script>
