@@ -99,19 +99,21 @@ var progressbaroptions2 = {
 
     }
 }
-const bar_id = [litMale, illMale,litFemale,illFemale,litUrban,illUrban,litRural,illRural];
+const bar_id = [litMale, illMale,litFemale,illFemale,litUrban,illUrban,litRural,illRural,litp,illp];
 const bar_id1 = ["litMale", "illMale","litFemale","illFemale","litUrban","illUrban","litRural","illRural"];
 $(document).ready(function () {
     var input = "   himachal PraDesh     ";
+    $("#loc").text(input.trim().toUpperCase()+" ,INDIA");
     input = input.trim().split(" ").join("").toLowerCase();
     console.log(input);
-    api_call('f'+input);
+    api_call(input);
 });
 $( "#searchbutton" ).click(function() {
     var input = document.getElementById("searchval").value;
+    $("#loc").text(input.trim().toUpperCase()+" ,INDIA");
     input = input.trim().split(" ").join("").toLowerCase();
     // con
-    api_call('f'+input);
+    api_call(input);
     $("#searchval").val('');
   });
 function literacy(id, data) {
@@ -199,12 +201,17 @@ function createChart(id,labels, data1,label1, data2,label2) {
 }
 
 function api_call(input) {
-    $.get('http://192.168.43.28:5000/info/' + input, function (data) {
+    $.get('http://192.168.43.28:5000/info/f' + input, function (data) {
         console.log(data);
         for(var i=0;i<bar_id.length;i++)
             {
                 $('#'+bar_id1[i]).empty();
             }
+        $('#dense').text(data.population_density+" per square km.");
+        $('#ratio').text(data.Sexratio+" :1000 men");
+        literacy(bar_id[8], data["Literacy Percentage"][0]);
+        illiteracy(bar_id[9], data["Literacy Percentage"][1])
+        createChart("lineChart",data["labels"], data.datasets[2].data,data.datasets[2].label, data.datasets[1].data,data.datasets[1].label);
         literacy(bar_id[0], data["Literacy Male Percentage"][0]);
         illiteracy(bar_id[1], data["Literacy Male Percentage"][1])
         createChart("lineChart1",data["labels"], data.datasets[4].data,data.datasets[4].label, data.datasets[3].data,data.datasets[3].label);

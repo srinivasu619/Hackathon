@@ -1,17 +1,19 @@
+const category = ["ST","SC","OBC","Other categories"]
 $(document).ready(function () {
     api_call();
 });
 function api_call() {
     $.get('http://192.168.43.28:5000/common/', function (data) {
         console.log(data);
-        createChart(data["Community/Caste"], data["Female"],"Female", data["Male"],"Male");
+        createChart("barChart_religion",data["Community/Caste"], data["Female"],"Female", data["Male"],"Male",'Literacy Rate Distribution - Religion Based');
+        createChart("barChart_com",category, data["female_array_comm"],"Female", data["male_array_comm"],"Male",'Literacy Rate Distribution - Category Based');
     });
 }
-function createChart(labels, data1,label1, data2,label2) {
+function createChart(id,labels, data1,label1, data2,label2,title) {
     const options = {
         title: {
             display: true,
-            text: 'Literacy Rate Distribution - Relegion Based',
+            text: title,
             position: 'top',
             fontStyle: 'bold',
             fontSize: 16,
@@ -69,7 +71,7 @@ function createChart(labels, data1,label1, data2,label2) {
             }
         ]
     };
-    let CHART = document.getElementById("lineChart_home");
+    let CHART = document.getElementById(id);
     console.log(CHART);
     var chart = new Chart(CHART, {
         type: 'bar',

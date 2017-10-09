@@ -59,7 +59,7 @@ $(document).ready(function () {
 function prediction_api_call() {
     $.get('http://192.168.43.28:5000/prediction/', function (data) {
         console.log(data);
-        createChart(data.Year, data["Female Literacy Percentage"], "Female Literacy Percentage", data["Male Literacy Percentage"], "male Literacy Percentage", data["Literacy Percentage"], "Literacy Percentage");
+        createChart(data.Year, data["Female Literacy Percentage"], "Female Literacy Percentage", data["Male Literacy Percentage"], "Male Literacy Percentage", data["Literacy Percentage"], "Literacy Percentage");
         createTable(data["state_array"],data["array_2001"],data["array_2011"],data["array_2021"]);
     });
 }
